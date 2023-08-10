@@ -9,13 +9,9 @@ plugins {
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
-    }
+    androidTarget()
+    jvmToolchain(11)
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -56,6 +52,7 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
+                implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
             }
         }
         val androidUnitTest by getting
@@ -88,5 +85,11 @@ android {
     compileSdk = 33
     defaultConfig {
         minSdk = 28
+    }
+
+    // @TODO: Remove workaround for https://issuetracker.google.com/issues/260059413
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 }
