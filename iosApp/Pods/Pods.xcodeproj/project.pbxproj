@@ -3,15 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
 		8777C9F6889E59EFFD631D80AEE9048B /* shared */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 8349D8E2EC974421A14EF8ABFF6AD6DC /* Build configuration list for PBXAggregateTarget "shared" */;
+			buildConfigurationList = B999BD58A146737F72CA68509B0BCE77 /* Build configuration list for PBXAggregateTarget "shared" */;
 			buildPhases = (
-				BEA8885189D408D600647BDC228A6A20 /* [CP-User] Build shared */,
+				11F372A9E68C08375C21A8D47B3CDB02 /* [CP-User] Build shared */,
+				35C7D8836447FEC746DA683E14000153 /* [CP] Copy dSYMs */,
 			);
 			dependencies = (
 			);
@@ -346,6 +347,7 @@
 /* Begin PBXFileReference section */
 		0010BC62313AFB58C7DDD8D1C26B51D2 /* SingleAssignmentDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleAssignmentDisposable.swift; path = RxSwift/Disposables/SingleAssignmentDisposable.swift; sourceTree = "<group>"; };
 		00365453091BF9A73D0A5B6F7174CB0A /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = RxSwift/Observables/Window.swift; sourceTree = "<group>"; };
+		009069A386B0A5A8DB76D61AE1586630 /* shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.debug.xcconfig; sourceTree = "<group>"; };
 		00AD378D181FC4D260FEF1018A244A7D /* AsyncFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncFunction.swift; path = KMPNativeCoroutinesAsync/AsyncFunction.swift; sourceTree = "<group>"; };
 		00D53914200EC711217B542B7E9DC1BE /* KMMViewModelSwiftUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KMMViewModelSwiftUI-umbrella.h"; sourceTree = "<group>"; };
 		0170F091CB1267043C414890E34AE86F /* KMPNativeCoroutinesCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KMPNativeCoroutinesCore.debug.xcconfig; sourceTree = "<group>"; };
@@ -401,7 +403,6 @@
 		328E1A205D297C5EF8ED5FF92948AD68 /* Infallible+CombineLatest+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Infallible+CombineLatest+arity.swift"; path = "RxSwift/Traits/Infallible/Infallible+CombineLatest+arity.swift"; sourceTree = "<group>"; };
 		329A459AEBB597E69931A55B18A84C2E /* Using.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Using.swift; path = RxSwift/Observables/Using.swift; sourceTree = "<group>"; };
 		344883667E1898B63C83962E6AE50078 /* Catch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Catch.swift; path = RxSwift/Observables/Catch.swift; sourceTree = "<group>"; };
-		35548E3BD8DA30925E8FE97E67B84868 /* shared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.release.xcconfig; sourceTree = "<group>"; };
 		374560B9A787BEF36E6242B316D1157E /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Platform/DataStructures/Queue.swift; sourceTree = "<group>"; };
 		3A3EC5085B0D4A8DAE261933950F6618 /* RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxSwift.debug.xcconfig; sourceTree = "<group>"; };
 		3D4E92F875C81FD54B7E6AB8B78D86DF /* HistoricalSchedulerTimeConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HistoricalSchedulerTimeConverter.swift; path = RxSwift/Schedulers/HistoricalSchedulerTimeConverter.swift; sourceTree = "<group>"; };
@@ -455,7 +456,8 @@
 		6EA8306B28230CCB700849483BDC05EF /* Sink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sink.swift; path = RxSwift/Observables/Sink.swift; sourceTree = "<group>"; };
 		6EF9C4B2A33B5EF88249962806578415 /* Completable+AndThen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Completable+AndThen.swift"; path = "RxSwift/Traits/PrimitiveSequence/Completable+AndThen.swift"; sourceTree = "<group>"; };
 		70969336D7CF9184916978ED2F61B571 /* AnonymousDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnonymousDisposable.swift; path = RxSwift/Disposables/AnonymousDisposable.swift; sourceTree = "<group>"; };
-		73D4D08B8C9FAD17B10E8E5C0EB49A76 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = build/cocoapods/framework/shared.framework; sourceTree = "<group>"; };
+		70D6E483B23F0B0627D6EE7BD5E32B58 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = build/cocoapods/framework/shared.framework; sourceTree = "<group>"; };
+		734A7EB7736A65B8A61B7858DBED0A43 /* shared.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = shared.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		74511F09945C00E06938AF93C8CFB9F6 /* Switch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Switch.swift; path = RxSwift/Observables/Switch.swift; sourceTree = "<group>"; };
 		772B9EE9FD35E9E6DFBCABCA64FC9764 /* KMPNativeCoroutinesAsync-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KMPNativeCoroutinesAsync-dummy.m"; sourceTree = "<group>"; };
 		7731DD36CF20151B1CF35354732DBAD8 /* KMPNativeCoroutinesAsync-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KMPNativeCoroutinesAsync-Info.plist"; sourceTree = "<group>"; };
@@ -488,7 +490,6 @@
 		93F39521CE541289D2A7FED9EBF97CB1 /* TakeWithPredicate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TakeWithPredicate.swift; path = RxSwift/Observables/TakeWithPredicate.swift; sourceTree = "<group>"; };
 		94D3E73685E273CCD8402B9329E61EAA /* KMMViewModelCoreObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KMMViewModelCoreObjC-dummy.m"; sourceTree = "<group>"; };
 		953D16BCB3A6B2B0CCCB76671A906F70 /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = KMPNativeCoroutinesRxSwift/Observable.swift; sourceTree = "<group>"; };
-		95B09EA82E7AF9ACCCCAF3E55C859116 /* shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.debug.xcconfig; sourceTree = "<group>"; };
 		96F4429806B337881A7224A5D463A5E7 /* SynchronizedDisposeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedDisposeType.swift; path = RxSwift/Concurrency/SynchronizedDisposeType.swift; sourceTree = "<group>"; };
 		979BB2901775CC89C3CDB2705364BC56 /* SubscribeOn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscribeOn.swift; path = RxSwift/Observables/SubscribeOn.swift; sourceTree = "<group>"; };
 		98B2E806C59737E5D80074981D7F8B6B /* CompositeDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositeDisposable.swift; path = RxSwift/Disposables/CompositeDisposable.swift; sourceTree = "<group>"; };
@@ -581,10 +582,12 @@
 		E00AF875986731420816BA7445E1CE4C /* ImmediateSchedulerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmediateSchedulerType.swift; path = RxSwift/ImmediateSchedulerType.swift; sourceTree = "<group>"; };
 		E0944ADBA76108ABC40B5792426ECDE8 /* Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rx.swift; path = RxSwift/Rx.swift; sourceTree = "<group>"; };
 		E185099CCB13D13A15B78AD8D45FEF97 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = RxSwift/SwiftSupport/SwiftSupport.swift; sourceTree = "<group>"; };
+		E23ED8A03974E9F66764D2E6B0853DA2 /* shared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.release.xcconfig; sourceTree = "<group>"; };
 		E2936FE75781644C4233B58D1C98B0AF /* RxSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RxSwift-dummy.m"; sourceTree = "<group>"; };
 		E2EA2F293144648C207569E44644F757 /* InvocableScheduledItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvocableScheduledItem.swift; path = RxSwift/Schedulers/Internal/InvocableScheduledItem.swift; sourceTree = "<group>"; };
 		E32954243B605448566BC0C0B0BCF70D /* KMPNativeCoroutinesCore */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KMPNativeCoroutinesCore; path = KMPNativeCoroutinesCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F2593EF0C841336862EC6A84302804 /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extensions.swift"; path = "Platform/DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
+		E65A04D83A11443156A141A6DC9578F0 /* shared-copy-dsyms.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "shared-copy-dsyms.sh"; sourceTree = "<group>"; };
 		E6CD4CC2AEA8F85AE6283B490D42CCAD /* Observable+Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Observable+Concurrency.swift"; path = "RxSwift/Observable+Concurrency.swift"; sourceTree = "<group>"; };
 		E73923BC2F49B2D652D63B3B3BC59DA1 /* KMPNativeCoroutinesRxSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KMPNativeCoroutinesRxSwift-umbrella.h"; sourceTree = "<group>"; };
 		E82B52086A4081AC0F2A962001DF06DB /* InfiniteSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteSequence.swift; path = Platform/DataStructures/InfiniteSequence.swift; sourceTree = "<group>"; };
@@ -603,7 +606,6 @@
 		F918634AFFF6EB2DE5466A214EF77273 /* ObservableConvertibleType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObservableConvertibleType.swift; path = RxSwift/ObservableConvertibleType.swift; sourceTree = "<group>"; };
 		FA3450BDD355EBA93B044CA68B86DD98 /* BinaryDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryDisposable.swift; path = RxSwift/Disposables/BinaryDisposable.swift; sourceTree = "<group>"; };
 		FA5DC17B25B5B490EF0039C3060CEA16 /* Concat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concat.swift; path = RxSwift/Observables/Concat.swift; sourceTree = "<group>"; };
-		FB1BF8BE937671FB0F330C2D28634477 /* shared.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = shared.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FC1012E61F8D6A4E399F7D609E1E8DCF /* KMMViewModelCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KMMViewModelCore.modulemap; sourceTree = "<group>"; };
 		FD06778D2150B3601D070305673ED556 /* KMPNativeCoroutinesCombine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KMPNativeCoroutinesCombine-dummy.m"; sourceTree = "<group>"; };
 		FDA0D58EC3ADD6F2B6CDC474A31512D4 /* Take.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Take.swift; path = RxSwift/Observables/Take.swift; sourceTree = "<group>"; };
@@ -734,10 +736,18 @@
 			path = KMPNativeCoroutinesCore;
 			sourceTree = "<group>";
 		};
+		301E7E01BDCE486E3B1785C9B8188C70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70D6E483B23F0B0627D6EE7BD5E32B58 /* shared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		313FE5FE915A4A924C55AAC02A910D61 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EEF3277DCE2E4B31CF76A57AB68C2BA1 /* shared */,
+				D8A02EC6C8DF3366897E8E9AFF0F6E82 /* shared */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -771,22 +781,12 @@
 			path = "Target Support Files/Pods-iosApp";
 			sourceTree = "<group>";
 		};
-		569B56E5B05425CAE32676C6049DC8CB /* Pod */ = {
+		58DAE3B502B145BFD26ADEF120E929E9 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				FB1BF8BE937671FB0F330C2D28634477 /* shared.podspec */,
+				734A7EB7736A65B8A61B7858DBED0A43 /* shared.podspec */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		5CB66AAACA3977B45E9869C360E9F289 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				95B09EA82E7AF9ACCCCAF3E55C859116 /* shared.debug.xcconfig */,
-				35548E3BD8DA30925E8FE97E67B84868 /* shared.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../iosApp/Pods/Target Support Files/shared";
 			sourceTree = "<group>";
 		};
 		5D9F7AB270E86859F5F9C5CBD2AC858A /* Support Files */ = {
@@ -829,14 +829,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		7DBF81461E18ACE1B4BD971BAC841CF7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				73D4D08B8C9FAD17B10E8E5C0EB49A76 /* shared.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		88559E9CB4CC8281853377D8039E5C9D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,6 +858,17 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KMPNativeCoroutinesRxSwift";
+			sourceTree = "<group>";
+		};
+		956A655F6D8CFE14847D80D0455A890F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E65A04D83A11443156A141A6DC9578F0 /* shared-copy-dsyms.sh */,
+				009069A386B0A5A8DB76D61AE1586630 /* shared.debug.xcconfig */,
+				E23ED8A03974E9F66764D2E6B0853DA2 /* shared.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../iosApp/Pods/Target Support Files/shared";
 			sourceTree = "<group>";
 		};
 		96E581947E6C789B9DBA9EB2C4C7646F /* KMMViewModelCoreObjC */ = {
@@ -1116,6 +1119,17 @@
 			);
 			sourceTree = "<group>";
 		};
+		D8A02EC6C8DF3366897E8E9AFF0F6E82 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				301E7E01BDCE486E3B1785C9B8188C70 /* Frameworks */,
+				58DAE3B502B145BFD26ADEF120E929E9 /* Pod */,
+				956A655F6D8CFE14847D80D0455A890F /* Support Files */,
+			);
+			name = shared;
+			path = ../../shared;
+			sourceTree = "<group>";
+		};
 		E2C64BC131C9A3E738BF75C45142DC10 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1156,17 +1170,6 @@
 				A6DFF4FA923D36A4B0A2C421263A6985 /* RxSwift */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		EEF3277DCE2E4B31CF76A57AB68C2BA1 /* shared */ = {
-			isa = PBXGroup;
-			children = (
-				7DBF81461E18ACE1B4BD971BAC841CF7 /* Frameworks */,
-				569B56E5B05425CAE32676C6049DC8CB /* Pod */,
-				5CB66AAACA3977B45E9869C360E9F289 /* Support Files */,
-			);
-			name = shared;
-			path = ../../shared;
 			sourceTree = "<group>";
 		};
 		EF050A41F78D9A11CC5D7DD47152CA7F /* Support Files */ = {
@@ -1463,7 +1466,7 @@
 				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1556,7 +1559,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BEA8885189D408D600647BDC228A6A20 /* [CP-User] Build shared */ = {
+		11F372A9E68C08375C21A8D47B3CDB02 /* [CP-User] Build shared */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1565,6 +1568,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "                if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n                  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
+		};
+		35C7D8836447FEC746DA683E14000153 /* [CP] Copy dSYMs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/shared/shared-copy-dsyms-input-files.xcfilelist",
+			);
+			name = "[CP] Copy dSYMs";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/shared/shared-copy-dsyms-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/shared/shared-copy-dsyms.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2226,6 +2246,23 @@
 			};
 			name = Debug;
 		};
+		8E1767EF3E210BC4C8DDA6D5A57FC3C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 009069A386B0A5A8DB76D61AE1586630 /* shared.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		92B3B2FDD612D739549C7EBABFE37476 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD2A263036D4BDEE77FB1DB979552EFF /* KMPNativeCoroutinesCore.release.xcconfig */;
@@ -2432,41 +2469,6 @@
 			};
 			name = Debug;
 		};
-		A7B4967B71249851CABD6EC29251E481 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95B09EA82E7AF9ACCCCAF3E55C859116 /* shared.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A96D4527F178BD8C0DEB7EE72B9AAE09 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35548E3BD8DA30925E8FE97E67B84868 /* shared.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		ACE156151316D0AE22331070B006BBFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 196C9E17D16D304A0636A2646F82EA77 /* KMPNativeCoroutinesCombine.release.xcconfig */;
@@ -2608,6 +2610,24 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E387420B1FEC2EAB6CA01993F647E86F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E23ED8A03974E9F66764D2E6B0853DA2 /* shared.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -2775,20 +2795,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8349D8E2EC974421A14EF8ABFF6AD6DC /* Build configuration list for PBXAggregateTarget "shared" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A7B4967B71249851CABD6EC29251E481 /* Debug */,
-				A96D4527F178BD8C0DEB7EE72B9AAE09 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8F7C5A61057627FF42F94C55208B85D5 /* Build configuration list for PBXNativeTarget "KMMViewModelSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5EA070F80BC0419C23B60A46584C3051 /* Debug */,
 				E15B016EEC1E82A44F450B6B80B41248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B999BD58A146737F72CA68509B0BCE77 /* Build configuration list for PBXAggregateTarget "shared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E1767EF3E210BC4C8DDA6D5A57FC3C6 /* Debug */,
+				E387420B1FEC2EAB6CA01993F647E86F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

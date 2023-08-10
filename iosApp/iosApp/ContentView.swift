@@ -17,7 +17,7 @@ struct ContentView: View {
                         Text("Email")
 
                         TextField("Email here", text: Binding(get: {
-                            viewModel.email.value as? String ?? ""
+                            viewModel.email
                         }, set: { value in
                             viewModel.setEmail(email: value)
                         }))
@@ -27,7 +27,7 @@ struct ContentView: View {
                         Text("Password")
 
                         SecureField("Type here", text: Binding(get: {
-                            viewModel.password.value as? String ?? ""
+                            viewModel.password
                         }, set: { value in
                             viewModel.setPassword(password: value)
                         }))
@@ -38,13 +38,34 @@ struct ContentView: View {
                     HStack {
                         Text("Email")
 
-                        Text(viewModel.email.value as! String)
+                        Text(viewModel.email)
                     }
                     HStack {
                         Text("Password")
 
-                        Text(viewModel.password.value as! String)
+                        Text(viewModel.password)
                     }
+                    HStack {
+                        Text("State")
+
+                        Text(viewModel.state.name)
+                    }
+                    HStack {
+                        Text("Error message")
+
+                        Text(viewModel.errorMessage ?? "—")
+                    }
+                }
+                
+                Section(header: Text("Action")) {
+                    Button {
+                        Task {
+                            try await viewModel.signIn()
+                        }
+                    } label: {
+                        Text("Sign in")
+                    }
+
                 }
             }
         }
