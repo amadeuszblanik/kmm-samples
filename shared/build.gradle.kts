@@ -28,6 +28,7 @@ kotlin {
     }
 
     sourceSets {
+        val ktorVersion = "2.3.3"
         val multiplatformSettingsVersion = "1.0.0"
         val kmmViewModelVersion = "1.0.0-ALPHA-12"
 
@@ -37,6 +38,12 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+                implementation("io.ktor:ktor-client-serialization:$ktorVersion")
+                implementation("io.ktor:ktor-client-logging:$ktorVersion")
+                implementation("io.ktor:ktor-client-auth:$ktorVersion")
                 implementation("com.russhwolf:multiplatform-settings-no-arg:$multiplatformSettingsVersion")
                 implementation("com.russhwolf:multiplatform-settings-serialization:$multiplatformSettingsVersion")
                 implementation("com.russhwolf:multiplatform-settings-coroutines:$multiplatformSettingsVersion")
@@ -55,7 +62,7 @@ kotlin {
                 implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
             }
         }
-        val androidUnitTest by getting
+
         val iosX64Main by getting
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
@@ -66,6 +73,7 @@ kotlin {
             iosSimulatorArm64Main.dependsOn(this)
 
             dependencies {
+                implementation("io.ktor:ktor-client-darwin:$ktorVersion")
             }
         }
         val iosX64Test by getting
