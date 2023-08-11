@@ -13,7 +13,7 @@ enum class ApiState {
     FAILURE
 }
 
-open class SignInViewModel: KMMViewModel() {
+open class SignInViewModel : KMMViewModel() {
     private val wolfieApi = WolfieApi()
 
     private val _email = MutableStateFlow(viewModelScope, "")
@@ -48,19 +48,28 @@ open class SignInViewModel: KMMViewModel() {
     suspend fun signIn() {
         println("Sign in with email: ${_email.value} and password: ${_password.value}")
         _state.value = ApiState.PENDING
+        println("Changed state to pending")
 
-        var response = wolfieApi.authSignIn(
-            ApiAuthSignInPayload(
-            username = _email.value,
-            password = _password.value
-        )
-        )
+        try {
+            var response = wolfieApi.authSignIn(
+                ApiAuthSignInPayload(
+                    username = _email.value,
+                    password = _password.value
+                )
+            )
 
-        if (response.success != null) {
-            _state.value = ApiState.SUCCESS
-        } else {
+            println("Got response: $response")
+
+            if (response.success != null) {
+                _state.value = ApiState.SUCCESS
+            } else {
+                _state.value = ApiState.FAILURE
+                _errorMessage.value = response.failure?.message ?: null
+            }
+        } catch (e: Exception) {
+            println("Got exception: $e")
             _state.value = ApiState.FAILURE
-            _errorMessage.value = response.failure?.message ?: null
+            _errorMessage.value = e.message ?: null
         }
     }
 }

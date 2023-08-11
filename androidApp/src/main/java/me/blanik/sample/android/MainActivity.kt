@@ -15,6 +15,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import me.blanik.sample.SignInViewModel
 
 class MainActivity : ComponentActivity() {
@@ -44,6 +48,8 @@ fun SignInScreen(
 ) {
     val emailState by signInViewModel.email.collectAsState()
     val passwordState by signInViewModel.password.collectAsState()
+    val stateState by signInViewModel.state.collectAsState()
+    val errorMessage by signInViewModel.errorMessage.collectAsState()
 
     Column {
         Text("Input")
@@ -62,6 +68,16 @@ fun SignInScreen(
         Text("Output")
         Text(text = emailState)
         Text(text = passwordState)
+        Text(text = stateState.name)
+        Text(text = errorMessage ?: "—")
+        Text("Actions")
+        Button(onClick = {
+            GlobalScope.async(Dispatchers.Main) {
+                signInViewModel.signIn()
+            }
+        }) {
+            Text(text = "Sign in")
+        }
     }
 }
 
